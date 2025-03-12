@@ -14,6 +14,7 @@
     .item { width: 200px; }
     .item img { width: 100%; height: auto; }
     .title { margin-top: 5px; }
+    h2 { margin-top: 40px; font-size: 24px; }
   </style>
 </head>
 <body>
@@ -21,44 +22,53 @@
 <nav><a href="/">HOME</a> <a href="/gallery.html">GALLERY</a> <a href="/about.html">ABOUT</a></nav>
 <h1>GALLERY</h1>
 
-{% for category in site.static_files %}
-  {% if category.path contains '/assets/original/' %}
-    <h2>Original</h2>
-    <div class="gallery">
-      <div class="item">
-        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
-        <div class="title">{{ category.name | split: '.' | first }}</div>
-      </div>
+<h2>Original</h2>
+<div class="gallery">
+  {% for file in site.static_files %}
+    {% if file.path contains 'assets/original/' %}
+    <div class="item">
+      <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+      <div class="title">{{ file.name | split: '.' | first }}</div>
     </div>
-  {% endif %}
-  {% if category.path contains '/assets/name/' %}
-    <h2>Name</h2>
-    <div class="gallery">
-      <div class="item">
-        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
-        <div class="title">{{ category.name | split: '.' | first }}</div>
-      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<h2>Name</h2>
+<div class="gallery">
+  {% for file in site.static_files %}
+    {% if file.path contains 'assets/name/' %}
+    <div class="item">
+      <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+      <div class="title">{{ file.name | split: '.' | first }}</div>
     </div>
-  {% endif %}
-  {% if category.path contains '/assets/papicci/' %}
-    <h2>PAPICCI</h2>
-    <div class="gallery">
-      <div class="item">
-        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
-        <div class="title">{{ category.name | split: '.' | first }}</div>
-      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<h2>PAPICCI</h2>
+<div class="gallery">
+  {% for file in site.static_files %}
+    {% if file.path contains 'assets/papicci/' %}
+    <div class="item">
+      <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+      <div class="title">{{ file.name | split: '.' | first }}</div>
     </div>
-  {% endif %}
-  {% if category.path contains '/assets/collab/' %}
-    <h2>Collab</h2>
-    <div class="gallery">
-      <div class="item">
-        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
-        <div class="title">{{ category.name | split: '.' | first }}</div>
-      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<h2>Collab</h2>
+<div class="gallery">
+  {% for file in site.static_files %}
+    {% if file.path contains 'assets/collab/' %}
+    <div class="item">
+      <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+      <div class="title">{{ file.name | split: '.' | first }}</div>
     </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
 
 </body>
 </html>
