@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - TAKA's Graffiti Art</title>
+  <style>
+    body { background-color: #000; color: #fff; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; }
+    h1 { margin-bottom: 10px; }
+    nav { margin: 10px 0; }
+    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 16px; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+    .item { width: 200px; }
+    .item img { width: 100%; height: auto; }
+    .title { margin-top: 5px; }
+  </style>
+</head>
+<body>
+<header>TAKA's Graffiti Art</header>
+<nav><a href="/">HOME</a> <a href="/gallery.html">GALLERY</a> <a href="/about.html">ABOUT</a></nav>
+<h1>GALLERY</h1>
+
+{% for category in site.static_files %}
+  {% if category.path contains '/assets/original/' %}
+    <h2>Original</h2>
+    <div class="gallery">
+      <div class="item">
+        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
+        <div class="title">{{ category.name | split: '.' | first }}</div>
+      </div>
+    </div>
+  {% endif %}
+  {% if category.path contains '/assets/name/' %}
+    <h2>Name</h2>
+    <div class="gallery">
+      <div class="item">
+        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
+        <div class="title">{{ category.name | split: '.' | first }}</div>
+      </div>
+    </div>
+  {% endif %}
+  {% if category.path contains '/assets/papicci/' %}
+    <h2>PAPICCI</h2>
+    <div class="gallery">
+      <div class="item">
+        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
+        <div class="title">{{ category.name | split: '.' | first }}</div>
+      </div>
+    </div>
+  {% endif %}
+  {% if category.path contains '/assets/collab/' %}
+    <h2>Collab</h2>
+    <div class="gallery">
+      <div class="item">
+        <img src="{{ category.path }}" alt="{{ category.name | split: '.' | first }}">
+        <div class="title">{{ category.name | split: '.' | first }}</div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+</body>
+</html>
