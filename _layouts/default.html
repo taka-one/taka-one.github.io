@@ -13,15 +13,7 @@
     .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
     .item { width: 200px; }
     .item img { width: 100%; height: auto; }
-    .title { 
-      margin-top: 5px; 
-      word-wrap: break-word; 
-      overflow-wrap: break-word; 
-      white-space: normal; 
-      width: 100%; 
-      display: block; 
-      max-width: 200px;
-    }
+    .title { margin-top: 5px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; width: 100%; display: block; max-width: 200px; }
     h1, h2 { margin: 30px 0 10px; }
   </style>
 </head>
@@ -29,7 +21,7 @@
 <header>TAKA's Graffiti Art</header>
 <nav><a href="/">HOME</a> <a href="/gallery">GALLERY</a> <a href="/about">ABOUT</a></nav>
 
-{{ content }} <!-- ページごとのコンテンツだけ表示 -->
+{{ content }}
 
 </body>
 </html>
