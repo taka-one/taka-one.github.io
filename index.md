@@ -6,7 +6,7 @@ title: Home
 
 # 言葉も、名前も、アートにしよう。
 
-![メイン画像](assets/main/main.jpg)
+![メイン画像](assets/main/main.png)
 
 ---
 
