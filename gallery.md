@@ -9,9 +9,9 @@ title: Gallery
 <h2>Name</h2>
 <div class="gallery">
 {% for file in site.static_files %}
-  {% if file.path contains 'assets/images/name/' %}
+  {% if file.path contains 'assets/name/' %}
   <div class="item">
-    <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+    <img src="/{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
     <div class="title">{{ file.name | split: '.' | first }}</div>
   </div>
   {% endif %}
@@ -21,9 +21,9 @@ title: Gallery
 <h2>Original</h2>
 <div class="gallery">
 {% for file in site.static_files %}
-  {% if file.path contains 'assets/images/original/' %}
+  {% if file.path contains 'assets/original/' %}
   <div class="item">
-    <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+    <img src="/{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
     <div class="title">{{ file.name | split: '.' | first }}</div>
   </div>
   {% endif %}
@@ -33,9 +33,9 @@ title: Gallery
 <h2>PAPICCI</h2>
 <div class="gallery">
 {% for file in site.static_files %}
-  {% if file.path contains 'assets/images/papicci/' %}
+  {% if file.path contains 'assets/papicci/' %}
   <div class="item">
-    <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+    <img src="/{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
     <div class="title">{{ file.name | split: '.' | first }}</div>
   </div>
   {% endif %}
@@ -45,9 +45,9 @@ title: Gallery
 <h2>Collaboration</h2>
 <div class="gallery">
 {% for file in site.static_files %}
-  {% if file.path contains 'assets/images/collaboration/' %}
+  {% if file.path contains 'assets/collaboration/' %}
   <div class="item">
-    <img src="{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
+    <img src="/{{ file.path }}" alt="{{ file.name | split: '.' | first }}">
     <div class="title">{{ file.name | split: '.' | first }}</div>
   </div>
   {% endif %}
