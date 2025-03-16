@@ -2,17 +2,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content='width=device-width, initial-scale=1.0'>
-  <title>TAKA's Graffiti Art</title>
-  <link rel="stylesheet" href="/assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKA's Graffiti Art</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to TAKA's Graffiti Art</h1>
-  <img src="assets/main/main.png" alt="メイン画像" class="main-image">
-  <p>言葉も、名前も、アートにしよう。<br>世界に一つだけのグラフィティを届けます。</p>
-  <nav>
-    <a href="gallery.html">Gallery</a> | <a href="about.html">About</a>
-  </nav>
+    <header><h1>TAKA's Graffiti Art</h1></header>
+    <nav>
+        <a href="/">HOME</a>
+        <a href="/gallery.html">GALLERY</a>
+        <a href="/about.html">ABOUT</a>
+    </nav>
+    <img src="assets/main.jpg" alt="Main Image" class="main-image">
 </body>
 </html>
