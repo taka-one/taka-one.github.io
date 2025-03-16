@@ -2,29 +2,45 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - TAKA's Graffiti Art</title>
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body { background: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 30px; }
+        h2 { font-size: 28px; margin: 40px 0 20px; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .item { width: 200px; }
+        .item img { width: 100%; height: auto; }
+        .item .title { margin-top: 5px; font-size: 14px; word-break: break-word; }
+    </style>
 </head>
 <body>
-  <h1>Gallery</h1>
-  <nav>
-    <a href="index.html">Home</a> | <a href="about.html">About</a>
-  </nav>
+    <h1>GALLERY</h1>
 
-  <h2>Original</h2>
-  <div id="original-gallery" class="gallery-container"></div>
+    <h2>Name</h2>
+    <div class="gallery">
 
-  <h2>Name</h2>
-  <div id="name-gallery" class="gallery-container"></div>
+        <div class="item">
+            <img src="assets/name/01_Belleza.jpeg" alt="01_Belleza">
+            <div class="title">01_Belleza</div>
+        </div>
+    
+        <div class="item">
+            <img src="assets/name/02_HANA.jpeg" alt="02_HANA">
+            <div class="title">02_HANA</div>
+        </div>
+    
+    </div>
 
-  <h2>PAPICCI</h2>
-  <div id="papicci-gallery" class="gallery-container"></div>
+    <h2>Original</h2>
+    <p>準備中</p>
 
-  <h2>Collaboration</h2>
-  <div id="collaboration-gallery" class="gallery-container"></div>
+    <h2>PAPICCI</h2>
+    <p>準備中</p>
 
-  <script src="js/gallery.js"></script>
+    <h2>Collaboration</h2>
+    <p>準備中</p>
+
 </body>
 </html>
